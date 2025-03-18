@@ -1,0 +1,11 @@
+h1 {
+    font-family: "pressio", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 70px;
+    color: rgb(9, 148, 65);
+}
+
+#gameArea {
+    border: solid 3px rgb(9, 148, 65) ;
+}
