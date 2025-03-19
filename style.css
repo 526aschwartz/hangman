@@ -6,6 +6,24 @@ h1 {
     color: rgb(9, 148, 65);
 }
 
-#gameArea {
-    border: solid 3px rgb(9, 148, 65) ;
+
+.easy { 
+    background-color: #9df592;
+    color: rgb(9, 148, 65);
+    font-size: 30px;
+    border: 2px solid rgb(9, 148, 65);
+}
+
+.medium {
+    background-color: lightyellow;
+    color: rgb(218, 203, 118);
+    font-size: 30px;
+    border: 2px solid rgb(218, 203, 118);
+}
+
+.hard {
+    background-color: rgb(255, 118, 108);
+    color: rgb(158, 44, 35);
+    font-size: 30px;
+    border: 2px solid rgb(158, 44, 35);
 }
