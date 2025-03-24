@@ -103,3 +103,32 @@ function guessLetter () {
     document.getElementById('letterInput').focus() // Refocus input field for next guess
   
   }
+
+function updateWrongGuess (guessedLetter) {
+    wrongGuesses++
+    document.getElementById('wrongLetters').textContent += `${guessedLetter}`
+    //document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuesses}.jpg`
+
+    if (wrongGuesses === maxMistakes) {
+        //endGame(false)
+    }
+}
+
+function updateCorrectGuess(guessedLetter) {
+    let newDisplayedWord = ''
+
+    for (let i=0; i < selectedWord.length; i++){
+        if (selectedWord[i] === guessedLetter) {
+            newDisplayedWord += guessedLetter
+        } else {
+        newDisplayedWord += displayedWord[i]
+        }
+    }
+
+    displayedWord = newDisplayedWord
+    updateUI()
+
+    if (!displayedWord.includes('_')) {
+        endGame(true)
+    }
+}
