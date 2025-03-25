@@ -142,3 +142,11 @@ setTimeout(() => alert(message), 100) // Display alert after short delay
 function restartGame(){
   location.reload()
 }
+
+// Add event listener for Enter key press on letter input field
+document.getElementById('letterInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') { 
+      guessLetter();
+    }
+  });
+  
