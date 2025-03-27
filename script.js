@@ -10,6 +10,10 @@ let wrongGuesses = 0
 let guessedLetters = []
 const maxMistakes = 6
 
+//win/lose audio
+const winSound = new Audio('sounds/game-bonus-2-294436.mp3');  
+const loseSound = new Audio('sounds/losing-horn-313723.mp3');
+
 // Start Game Function (runs everything)
 function startGame (level) {
   //reset game
@@ -133,6 +137,13 @@ function endGame(won){
   let message = won
   ? 'Congratulations! You guessed the word!'
   : `Game Over! The word was "${selectedWord}".`
+
+    // Play sound
+    if (won) {
+      winSound.play()
+    } else {
+      loseSound.play()
+    }
 
 setTimeout(() => alert(message), 100) // Display alert after short delay
 
