@@ -105,7 +105,7 @@ document.getElementById('letterInput').focus() // Refocus input field for next g
 function updateWrongGuess(guessedLetter){ 
 wrongGuesses++
 document.getElementById('wrongLetters').textContent += `${guessedLetter}`
-//document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuesses}.jpg`
+document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuesses}.jpg`
 
 if (wrongGuesses === maxMistakes){
   endGame(false)
