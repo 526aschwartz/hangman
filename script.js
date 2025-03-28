@@ -104,7 +104,7 @@ document.getElementById('letterInput').focus() // Refocus input field for next g
 
 function updateWrongGuess(guessedLetter){ 
 wrongGuesses++
-document.getElementById('wrongLetters').textContent += `${guessedLetter}`
+document.getElementById('wrongLetters').textContent += ` ${guessedLetter}`
 document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuesses}.jpg`
 
 if (wrongGuesses === maxMistakes){
@@ -150,8 +150,20 @@ setTimeout(() => alert(message), 100) // Display alert after short delay
 }
 
 // /Restart Game - Reloads the page to reset everything
-function restartGame(){
-location.reload()
+function restartGame() {
+  wrongGuesses = 0
+  selectedWord = ''
+  displayedWord = ''
+  guessedLetters = ''
+  wrongLetters = ''
+  document.getElementById('wrongLetters').textContent = `Wrong Letters:`
+  document.getElementById('letterInput').value = ''
+  document.getElementById('difficultySelection').classList.remove('d-none')
+  document.getElementById('difficultySelection').classList.remove('d-none')
+  document.getElementById('gameArea').classList.add('d-none')
+  document.getElementById('gameArea').classList.add('d-none')
+  document.getElementById('difficultyBox').classList.add('d-none')
+
 }
 
 // Add event listener for Enter key press on letter input field
