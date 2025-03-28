@@ -36,3 +36,15 @@ h3, #difficultyBox {
     font-style: bold;
 
 }
+
+main {
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(138, 190, 160) ;
+    border: solid 3px white;
+    border-radius: 4px;
+}
+
+body {
+    background-color: rgb(33, 68, 43);
+}
