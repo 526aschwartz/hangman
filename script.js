@@ -163,6 +163,7 @@ function restartGame() {
   document.getElementById('gameArea').classList.add('d-none')
   document.getElementById('gameArea').classList.add('d-none')
   document.getElementById('difficultyBox').classList.add('d-none')
+  document.getElementById('shamrock').src = `imgs/shamrock6.jpg`
 
 }
 

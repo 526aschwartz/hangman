@@ -4,6 +4,7 @@ h1 {
     font-style: normal;
     font-size: 70px;
     color: rgb(9, 148, 65);
+    padding-top: 10%;
 }
 
 
@@ -26,4 +27,12 @@ h1 {
     color: rgb(158, 44, 35);
     font-size: 30px;
     border: 2px solid rgb(158, 44, 35);
+}
+
+
+h3, #difficultyBox {
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+
 }
