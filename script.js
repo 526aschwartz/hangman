@@ -174,8 +174,7 @@ function restartGame() {
   displayedWord = ''
   guessedLetters = ''
   wrongLetters = ''
-  winAmount = 0;
-  loseAmount = 0;
+  
   document.getElementById('wrongLetters').textContent = `Wrong Letters:`
   document.getElementById('letterInput').value = ''
   document.getElementById('difficultySelection').classList.remove('d-none')
@@ -185,7 +184,6 @@ function restartGame() {
   document.getElementById('difficultyBox').classList.add('d-none')
   document.getElementById('shamrock').src = `imgs/shamrock6.jpg`
 
-  updateScoreboard(); 
 }
 
 // Add event listener for Enter key press on letter input field
