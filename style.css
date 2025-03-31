@@ -7,6 +7,9 @@ h1 {
     padding-top: 10%;
 }
 
+#wordDisplay {
+    color: rgb(9, 148, 65);
+}
 
 .easy { 
     background-color: #9df592;
@@ -43,6 +46,7 @@ main {
     background-color: rgb(138, 190, 160) ;
     border: solid 3px white;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 body {

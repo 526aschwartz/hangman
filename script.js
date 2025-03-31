@@ -9,6 +9,18 @@ let displayedWord = ''
 let wrongGuesses = 0
 let guessedLetters = []
 const maxMistakes = 6
+let winAmount = 0
+let loseAmount = 0
+
+
+// Get the scoreboard element
+const scoreboard = document.getElementById('scoreboard');
+
+// Function to update the scoreboard
+const updateScoreboard = () => {
+    scoreboard.innerHTML = `Wins: ${winAmount} | Losses: ${loseAmount}`;
+};
+
 
 //win/lose audio
 const winSound = new Audio('sounds/game-bonus-2-294436.mp3');  
@@ -141,9 +153,15 @@ let message = won
   // Play sound
   if (won) {
     winSound.play()
+    winAmount++
+    updateScoreboard()
   } else {
     loseSound.play()
+    loseAmount++
+    updateScoreboard()
   }
+
+
 
 setTimeout(() => alert(message), 100) // Display alert after short delay
 
@@ -156,6 +174,8 @@ function restartGame() {
   displayedWord = ''
   guessedLetters = ''
   wrongLetters = ''
+  winAmount = 0;
+  loseAmount = 0;
   document.getElementById('wrongLetters').textContent = `Wrong Letters:`
   document.getElementById('letterInput').value = ''
   document.getElementById('difficultySelection').classList.remove('d-none')
@@ -165,6 +185,7 @@ function restartGame() {
   document.getElementById('difficultyBox').classList.add('d-none')
   document.getElementById('shamrock').src = `imgs/shamrock6.jpg`
 
+  updateScoreboard(); 
 }
 
 // Add event listener for Enter key press on letter input field
