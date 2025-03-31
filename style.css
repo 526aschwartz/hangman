@@ -11,6 +11,27 @@ h1 {
     color: rgb(9, 148, 65);
 }
 
+#scoreboard {
+    color:  rgb(9, 148, 65);
+    font-size: 20px;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+}
+
+#guessBtn, #restartBtn, #difficulty-btn {
+    font-family: "halcom", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#wrongLetters {
+    font-size: 20px;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+}
+
 .easy { 
     background-color: #9df592;
     color: rgb(9, 148, 65);
