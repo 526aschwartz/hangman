@@ -144,28 +144,31 @@ if (!displayedWord.includes('_')) {
 }
 
 }
-
 function endGame(won){
-let message = won
-? 'Congratulations! You guessed the word!'
-: `Game Over! The word was "${selectedWord}".`
-
-  // Play sound
-  if (won) {
-    winSound.play()
-    winAmount++
-    updateScoreboard()
-  } else {
-    loseSound.play()
-    loseAmount++
-    updateScoreboard()
+ 
+  
+    // Play sound
+    if (won) {
+      document.getElementById('correct').classList.remove('d-none')
+      document.getElementById('correct').classList.add('d-block')
+      winSound.play()
+      winAmount++
+      updateScoreboard()
+    } else {
+      document.getElementById('wrong').textContent += ` ${selectedWord}`
+      document.getElementById('wrong').classList.remove('d-none')
+      document.getElementById('wrong').classList.add('d-block')
+      loseSound.play()
+      loseAmount++
+      updateScoreboard()
+    }
+  
+  
+  
+  setTimeout(() => alert(message), 100) // Display alert after short delay
+  
   }
-
-
-
-setTimeout(() => alert(message), 100) // Display alert after short delay
-
-}
+  
 
 // /Restart Game - Reloads the page to reset everything
 function restartGame() {
@@ -183,6 +186,8 @@ function restartGame() {
   document.getElementById('gameArea').classList.add('d-none')
   document.getElementById('difficultyBox').classList.add('d-none')
   document.getElementById('shamrock').src = `imgs/shamrock6.jpg`
+  document.getElementById('correct').classList.add('d-none')
+  document.getElementById('wrong').classList.add('d-none')
 
 }
 
