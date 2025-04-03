@@ -155,7 +155,7 @@ function endGame(won){
       winAmount++
       updateScoreboard()
     } else {
-      document.getElementById('wrong').innerHTML = `<h1 class="message">You lost! The correct word was: ${selectedWord}</h1>`;
+      document.getElementById('wrong').innerHTML = `<h1 class="message">You lost! The correct word was: ${selectedWord}</h1>`
       document.getElementById('wrong').classList.remove('d-none')
       document.getElementById('wrong').classList.add('d-block')
       loseSound.play()
