@@ -155,7 +155,7 @@ function endGame(won){
       winAmount++
       updateScoreboard()
     } else {
-      document.getElementById('wrong').textContent += ` ${selectedWord}`
+      document.getElementById('wrong').innerHTML = `<h1 class="message">You lost! The correct word was: >${selectedWord}</h1>`;
       document.getElementById('wrong').classList.remove('d-none')
       document.getElementById('wrong').classList.add('d-block')
       loseSound.play()
@@ -188,7 +188,6 @@ function restartGame() {
   document.getElementById('shamrock').src = `imgs/shamrock6.jpg`
   document.getElementById('correct').classList.add('d-none')
   document.getElementById('wrong').classList.add('d-none')
-
 }
 
 // Add event listener for Enter key press on letter input field
